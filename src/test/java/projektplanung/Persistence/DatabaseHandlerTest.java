@@ -752,6 +752,8 @@ class DatabaseHandlerTest {
 
         assertEquals(1, list.size());
         assertEquals("NeueRolle", list.get(0).getRollenbezeichnung());
+
+        dbh.closeJDBCConnection();
     }
 
     @Test
@@ -791,6 +793,7 @@ class DatabaseHandlerTest {
         assertEquals(mail, employeeChanged.getMail());
         assertEquals(Tel, employeeChanged.getTelefon());
 
+        dbh.closeJDBCConnection();
     }
 
 }
